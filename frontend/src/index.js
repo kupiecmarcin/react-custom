@@ -1,4 +1,8 @@
 import $ from 'jquery';
 import 'bootstrap';
 
-console.log('test');
+import Items from './components/Items';
+
+Promise.resolve()
+  .then(Items)
+  .then(itemsComp => $('#root').append(itemsComp));
