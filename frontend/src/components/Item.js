@@ -1,6 +1,5 @@
 export default (props) => {
   const {
-    id,
     name,
     age,
     gender,
