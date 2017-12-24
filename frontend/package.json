@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "prestart": "npm run build",
-    "start": "node ./build/app.bundle.js",
-    "start-dev": "webpack-dev-server --content-base build/",
-    "test": "mocha --compilers js:babel-core/register --recursive \"./src/spec/**/*.spec.js\""
+    "start-dev": "./node_modules/.bin/webpack-dev-server --content-base build/",
+    "test": "mocha --compilers js:babel-core/register --recursive \"./spec/**/*.spec.js\""
   },
   "keywords": [
     "react",
