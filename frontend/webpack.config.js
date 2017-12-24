@@ -8,8 +8,7 @@ module.exports = {
   entry: ['./src/index.js', './src/styles.sass'],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'js/app.[hash:8].bundle.js',
-    sourceMapFilename: 'js/app.bundle.map.js',
+    filename: 'js/bundle.js',
   },
   module: {
     loaders: [{
@@ -32,7 +31,7 @@ module.exports = {
       test: /\.(jpe?g|png|gif)$/i, // to support eg. background-image property
       loader: 'file-loader',
       query: {
-        name: '[name].[hash:8].[ext]',
+        name: '[name].[ext]',
         outputPath: 'images/',
       },
     },
@@ -47,7 +46,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new ExtractTextPlugin('css/styles.[hash:8].bundle.css'),
+    new ExtractTextPlugin('css/styles.bundle.css'),
     new HtmlWebpackPlugin({
       hash: false,
       filename: './index.html',
@@ -67,6 +66,7 @@ module.exports = {
     //   output: {
     //     comments: false,
     //   },
+    //   sourceMap: true,
     // }),
   ],
 };
